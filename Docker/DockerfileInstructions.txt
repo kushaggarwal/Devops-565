@@ -1,0 +1,45 @@
+Steps to create a Dockerfile
+
+1. Create a file with the name Dockerfile
+2. Add instructions in Dockerfile
+3. Build Dockerfile to create an image
+4. Run the image to create a container 
+
+
+
+Instructions to mention in the Dockerfile
+
+1. FROM - Represent the base OS, which is the command to be executed the first time 
+
+	FROM <ImageName>
+	Eg: FROM ubuntu:19.04
+
+2. COPY - This is used to copy files from one place to another
+
+	COPY <Source> <Destination>
+	Eg: COPY target/java-web-app.war  /usr/local/tomcat/webapps/java-web-app.war
+
+
+3. ADD - Download files from distant HTTP/HTTPS destinations 
+	ADD <URL>
+	Eg: ADD https://jenkinsURL
+
+4. RUN - This is to run any commands or scripts. This always take place in order when you create an image 
+
+	RUN <Command + args>
+	Eg: RUN touch <file-name>
+
+5. CMD - To start a process inside the container 
+		
+	CMD [command + args]
+	Eg: CMD [ “java”,”-jar”, “Jenkins.war”]
+
+6. ENTRYPOINT - A container will function as an executable is configured by ENTRYPOINT.
+
+	ENTRYPOINT [command+args]
+	Eg: ENTRYPOINT [“echo”,” Welcome to terminal”]
+
+
+
+
+	
