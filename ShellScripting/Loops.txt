@@ -1,0 +1,96 @@
+
+[1,2,3,4,5,6,7,8,9,10]
+
+// Problem Statement - To check for these numbers to be odd or even 
+
+// First way -> Write if else 10 times for each of the number 
+
+If ( $num %2 == 0)
+ Print even 
+Else 
+Print odd
+
+If ( $num %2 == 0)
+ Print even 
+Else 
+Print odd
+
+If ( $num %2 == 0)
+ Print even 
+Else 
+Print odd
+
+If ( $num %2 == 0)
+ Print even 
+Else 
+Print odd
+
+If ( $num %2 == 0)
+ Print even 
+Else 
+Print odd
+
+// Second Way loops 
+
+ for <var> in <value1, value2, value3 …… >
+ do
+	<command 1>
+	<command 2>
+	<command 3>
+Done
+
+// exit or run the rest of the flow 
+
+For <var> in [1,2,3,4,5,6,7,8,9,10]
+Do 
+	If ( $num %2 == 0)
+	 Print even 
+	Else 
+	Print odd
+Done
+
+
+// Conditional exit with break
+
+For i in 1 2 3 4 5
+Do 
+	statement 1
+	statement 2
+	if (condition)
+	then
+		break
+	fi
+	statement 3
+Done
+
+
+// WHILE LOOP
+
+While <condition>
+Do 
+	<statement 1>
+	<statement 2>
+Done
+
+While <condition>
+Do 
+	statement 1
+	statement 2
+	if (condition)
+	then
+		break
+	fi
+	statement 3
+Done
+
+
+
+
+
+
+
+
+
+
+
+

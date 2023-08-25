@@ -1,0 +1,30 @@
+1. Create a shell script 
+
+>> touch <file-name>.sh
+
+2. Add data into your script 
+
+>> vi <file-name>.sh (press i to enter into insert mode )
+
+3. Add these commands into the file 
+
+#!/bin/zsh
+
+object="mug"
+
+echo "The object present is $object"
+
+4. Save and quit the file in vim editor
+
+press escp
+type - :wq
+press enter ( to exit the file )
+
+5. Update executable for the shell script 
+
+>> chmod 777 <file-name>.sh
+
+6. Run the shell script 
+
+>> ./<file-name>.sh
+
