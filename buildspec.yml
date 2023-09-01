@@ -4,7 +4,7 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - $(aws ecr get-login-password --region eu-north-1 --no-include-email)
+      - $(aws ecr get-login-password --region eu-north-1)
       - REPOSITORY_URI=public.ecr.aws/u2o1u7d0/test
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
