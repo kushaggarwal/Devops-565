@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-nodejs
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webapp-nodejs
+  template:
+    metadata:
+      labels:
+        app: webapp-nodejs
+    spec:
+      containers:
+        - name: webapp-nodejs
+          image: public.ecr.aws/t7d7t4m1/webapp-nodejs-repo:latest
+          ports:
+            - containerPort: 3000
