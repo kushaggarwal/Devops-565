@@ -1,5 +1,5 @@
 #!/bin/zsh
-name="Linux"
+name="HowLinux"
 
 case $name in 
 	"Linux")
