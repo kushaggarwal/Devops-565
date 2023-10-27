@@ -1,5 +1,5 @@
 ---
-- name: Install Git
+- name: Install Apache
   hosts: all
   become: true
 
@@ -8,7 +8,7 @@
       apt:
         update-cache: yes
 
-    - name: Install Git
+    - name: Install Apache
       apt:
-        name: git
+        name: apache2
         state: present
