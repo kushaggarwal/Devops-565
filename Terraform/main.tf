@@ -23,10 +23,16 @@
 #   }
 # }
 
-module "ec2-instance" {
-  source = "./modules/ec2-instance"
-  ami = "ami-01eccbf80522b562b"
-  instance_type = "t3.micro"
-  instance_name = "myvm1"
-  
+module "ec2_instance" {
+  source  = "terraform-aws-modules/ec2-instance/aws"
+
+  name = "single-instance"
+
+  instance_type          = "t2.micro"
+  monitoring             = true
+
+  tags = {
+    Terraform   = "true"
+    Environment = "dev"
+  }
 }
