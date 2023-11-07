@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
     - name: webapp-nodejs
-      image: public.ecr.aws/t7d7t4m1/webapp-nodejs-repo:latest
+      image: ngnix
       ports:
-        - containerPort: 3000
+        - containerPort: 8080
   restartPolicy: Always
