@@ -15,6 +15,7 @@ spec:
     metadata:
       labels:
         app: web
+        key: value
     spec:
       containers:
         - name: nginx
