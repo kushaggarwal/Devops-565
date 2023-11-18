@@ -10,4 +10,4 @@ spec:
       image: httpd
       imagePullPolicy: IfNotPresent
   nodeSelector:
-    selector: node
+    node-name: one

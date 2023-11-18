@@ -8,10 +8,10 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
           - matchExpressions:
-              - key: topology.kubernetes.io/zone
+              - key: topology.kubernetes.io/region
                 operator: In
                 values:
-                  - eu-north-1c
+                  - eu-north-1
   containers:
     - name: with-node-affinity
       image: registry.k8s.io/pause:2.0
