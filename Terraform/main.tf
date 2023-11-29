@@ -1,3 +1,6 @@
+## Create normal EC2 instance resource using resource
+
+
 # data "aws_ami" "ubuntu" {
 #   most_recent = true
 
@@ -23,16 +26,28 @@
 #   }
 # }
 
-module "ec2_instance" {
-  source  = "terraform-aws-modules/ec2-instance/aws"
 
-  name = "single-instance"
+## Create an EC2 instance using predefined modules on terraform
 
-  instance_type          = "t2.micro"
-  monitoring             = true
+# module "ec2_instance" {
+#   source  = "terraform-aws-modules/ec2-instance/aws"
 
-  tags = {
-    Terraform   = "true"
-    Environment = "dev"
-  }
+#   name = "single-instance"
+
+#   instance_type          = "t2.micro"
+
+#   tags = {
+#     Terraform   = "true"
+#     Environment = "dev"
+#   }
+# }
+
+## Create EC2 instance using self defined modules
+
+module "my_instance" {
+
+  source = "./modules/ec2-instance"
+  instance_name = "new_instance"
+  instance_type = "t2.small"
+  
 }
